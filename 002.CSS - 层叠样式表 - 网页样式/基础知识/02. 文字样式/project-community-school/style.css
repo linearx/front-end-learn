@@ -1,0 +1,127 @@
+/* General setup */
+
+* {
+    box-sizing: border-box;
+  }
+
+  html{
+      font-size: 10px;
+  }
+  body {
+    font-family: sans-serif;
+    font-size: 2em;
+    line-height: 1.5;
+    letter-spacing: 0rem;
+    word-spacing: 0.2rem;
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+  }
+  
+  /* Layout */
+ header{
+     font-family:  slab serif;
+    text-align: center;
+}
+header h1{
+    letter-spacing: .2rem ;
+}
+
+
+section {
+    float: left;
+    width: 50%;
+}
+
+section h2+p{
+    text-indent: 20px;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+  }
+  a[href*="http"]{
+    background: url(./external-link-52.png) no-repeat 100% 0;
+    background-size: 1em 1em;
+    background-position-y: 0.2em ;
+    padding-right: 1.15em;
+}
+
+a:link{
+   color: #a66; 
+   border-bottom: 2px solid;
+}
+a:visited{
+    color: #a66; 
+ }
+a:hover{
+    border: hidden;
+}
+
+a:focus{
+    border: hidden;
+}
+
+aside {
+    float: left;
+    width: 30%;
+}
+
+nav {
+    float: left;
+    width: 20%;
+}
+
+footer {
+    clear: both;
+}
+ol{
+    list-style-type: lower-alpha;
+}
+
+ul{
+    list-style-type: square;
+}
+
+nav>ul{
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+
+}
+nav>ul>li{
+    margin: 0.8em;
+    padding: 0.5em;
+    line-height: 1.5em;
+    text-align: center;
+    border: #a66 solid 1px;
+}
+
+nav>ul>li>a:link{
+    text-decoration: none;
+    border-bottom: none;
+}
+nav>ul>li>a:hover{
+    color: white;
+    margin: 0.8em;
+    padding: 0.5em;
+    line-height: 1.5em;
+    background-color: #a66;
+}
+
+
+header, section, aside, nav, footer {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
