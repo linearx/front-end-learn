@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select-rebuild</title>
+    <link type="text/css" rel="stylesheet" href = "select-rebuild-style.css" />
+</head>
+<body>
+    <!-- 这是我们小部件的主要容器.
+     tabindex属性是用来让用户聚焦在小部件上的.
+     稍后我们会发现最好通过JavaScript来设定它的值. -->
+<div class="select" tabindex="0">
+
+    <!-- 这个容器用来显示组件现在的值 -->
+    <span class="value">Cherrdasdasdy</span>
+  
+    <!-- 这个容器包含我们的组件的所有可用选项.
+         因为他是一个列表，用ul元素是有意义的. -->
+    <ul class="optList">
+        <li class="option">Cherry</li>
+        <li class="option">Lemon</li>
+        <li class="option">Banana</li>
+        <li class="option">Strawberry</li>
+        <li class="option">Apple</li>
+     </ul>
+  
+  </div>
+
+<script>
+    // 这个函数会用在每当我们想要停用一个自定义组件的时候
+// 它需要一个参数：
+// select :要停用的带有 'select' 类的节点
+function deactivateSelect(select) {
+
+  // 如果组件没有运行，不用进行任何操作
+  if (!select.classList.contains('active')) return;
+
+  // 我们需要获取自定义组件的选项列表
+  var optList = select.querySelector('.optList');
+
+  // 关闭选项列表
+  optList.classList.add('hidden');
+
+  // 然后停用组件本身
+  select.classList.remove('active');
+}
+
+// 每当用户想要激活（或停用）这个组件的时候，会调用这个函数
+// 它需要2个参数：
+// select : 要激活的带有'select'类的DOM节点
+// selectList : 包含所有带'select'类的DOM节点的列表
+function activeSelect(select, selectList) {
+
+  // 如果组件已经激活了，不进行任何操作
+  if (select.classList.contains('active')) return;
+
+  // 我们需要关闭所有自定义组件的活动状态
+  // 因为deactiveselect函数满足forEach回调函数的所有请求，
+  // 我们直接使用它，不使用中间匿名函数
+  selectList.forEach(deactivateSelect);
+
+  // 然后我们激活特定的组件
+  select.classList.add('active');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

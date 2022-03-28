@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-labels</title>
+</head>
+<body>
+    <p>Required fields are followed by <abbr title="required">*</abbr>.</p>
+    <div>
+        <label for="username">Name:</label>
+        <input type="text" name="username">
+        <label for="username"><abbr title="required">*</abbr></label>
+      </div>
+
+      <div>
+        <label for="username">Name: <abbr title="required">*</abbr></label>
+        <input id="username" type="text" name="username">
+      </div>
+</body>
+</html>

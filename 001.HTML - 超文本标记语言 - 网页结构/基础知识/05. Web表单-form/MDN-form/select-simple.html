@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select-simple</title>
+</head>
+<body>
+    <label for="simple">Fruit</label>
+    <select id="simple" name="simple">
+        <option>Banana</option>
+        <option>Cherry</option>
+        <option>Lemon</option>
+      </select>
+      <br>
+    <label for="groups">Groups</label>
+    <select id="groups" name="groups">
+        <optgroup label="fruits"> 
+          <option>Banana</option>
+          <option selected>Cherry</option>
+          <option>Lemon</option>
+        </optgroup>
+        <optgroup label="vegetables">
+          <option>Carrot</option>
+          <option>Eggplant</option>
+          <option>Potato</option>
+        </optgroup>
+      </select>
+      <select multiple id="multi" name="multi">
+        <option>Banana</option>
+        <option>Cherry</option>
+        <option>Lemon</option>
+      </select>
+       <label for="myFruit">What's your favorite fruit?</label>
+      <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+      <datalist id="mySuggestion">  
+            <option>Apple</option> 
+            <option>Banana</option> 
+            <option>Blackberry</option> 
+            <option>Blueberry</option> 
+            <option>Lemon</option> 
+            <option>Lychee</option> 
+            <option>Peach</option> 
+            <option>Pear</option>
+    </datalist>
+</body>
+</html>
